@@ -1,16 +1,15 @@
-# my_portfolio
+# Portfólio de Fabio
 
-A new Flutter project.
+Este é o repositório do meu portfólio pessoal, desenvolvido com Flutter.
 
-## Getting Started
+## Funcionalidades
 
-This project is a starting point for a Flutter application.
+- Página inicial com apresentação.
+- Botão "Saiba Mais" (em desenvolvimento).
 
-A few resources to get you started if this is your first Flutter project:
+## Como Executar
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/meu-portfolio.git
+   ```
