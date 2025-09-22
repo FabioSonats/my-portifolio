@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Shield, Eye, Database, UserCheck } from 'lucide-react';
+import { ArrowLeft, Shield, Eye, Database, UserCheck, Mail, Phone } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
@@ -10,297 +10,313 @@ const PrivacyPolicy = () => {
 
   const content = {
     'pt-BR': {
-      title: 'Política de Privacidade e Termos de Uso',
-      lastUpdated: 'Última atualização: 8 de janeiro de 2025',
+      title: 'Política de Privacidade',
+      lastUpdated: 'Última atualização: 22 de setembro de 2025',
       sections: [
         {
           icon: Shield,
-          title: 'Proteção de Dados Pessoais',
-          content: `Em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018), este documento informa como coletamos, utilizamos e protegemos seus dados pessoais.
+          title: 'Informações Gerais',
+          content: `Este portfólio é propriedade de **Fábio Ferreira**, desenvolvedor de software especializado em Flutter e desenvolvimento full-stack.
 
 **Responsável pelo Tratamento:**
-Fábio Ferreira Paula dos Santos
-Email: ferreirafabio51@gmail.com
-
-**Dados Coletados:**
-- Informações de navegação (IP, navegador, sistema operacional)
-- Dados de interação com o chatbot
-- Estatísticas de visitas e tempo de permanência
-- Cookies essenciais para funcionamento do site`
+- Nome: Fábio Ferreira
+- Email: ferreirafabio51@gmail.com
+- LinkedIn: https://www.linkedin.com/in/ferreira-fábio-98b4304a/
+- WhatsApp: +55 42 99164-3802`
         },
         {
           icon: Eye,
-          title: 'Finalidade do Tratamento',
-          content: `Os dados coletados são utilizados para:
-- Análise estatística de visitação
-- Melhoria da experiência do usuário
-- Funcionamento do chatbot de portfólio
-- Segurança e prevenção de fraudes
-- Cumprimento de obrigações legais`
+          title: 'Dados Coletados',
+          content: `Este site coleta apenas dados essenciais para seu funcionamento:
+
+**Dados Técnicos:**
+- Endereço IP (anonimizado)
+- Tipo de navegador e sistema operacional
+- Páginas visitadas e tempo de permanência
+- Dados de interação com o chatbot
+
+**Dados de Contato:**
+- Apenas quando você nos contata voluntariamente
+- Email, nome e mensagem (se fornecidos)`
         },
         {
           icon: Database,
-          title: 'Armazenamento e Segurança',
-          content: `**Armazenamento:**
-- Dados são armazenados em servidores seguros (Supabase)
-- Localização: Estados Unidos (com adequação LGPD)
-- Tempo de retenção: 12 meses para dados analíticos
+          title: 'Como Usamos Seus Dados',
+          content: `Os dados coletados são utilizados exclusivamente para:
 
-**Medidas de Segurança:**
-- Criptografia de dados em trânsito e repouso
-- Autenticação segura para acesso aos dados
-- Monitoramento de segurança 24/7
-- Backups regulares e recuperação de desastres`
+**Funcionamento do Site:**
+- Análise de visitas para melhorar o portfólio
+- Funcionamento do chatbot de atendimento
+- Estatísticas de uso (anonimizadas)
+
+**Comunicação:**
+- Responder a mensagens enviadas
+- Entrar em contato sobre oportunidades profissionais
+
+**NÃO compartilhamos** seus dados com terceiros.`
         },
         {
           icon: UserCheck,
           title: 'Seus Direitos',
-          content: `Conforme a LGPD, você tem direito a:
-- **Acesso:** Confirmar se seus dados estão sendo tratados
-- **Correção:** Corrigir dados incompletos ou incorretos
-- **Eliminação:** Solicitar exclusão de dados desnecessários
-- **Portabilidade:** Receber seus dados em formato estruturado
-- **Oposição:** Opor-se ao tratamento de dados
-- **Revisão:** Revisão de decisões automatizadas
+          content: `De acordo com a LGPD, você tem direito a:
 
-**Para exercer seus direitos:**
-Email: p.sonats@gmail.com
-Prazo de resposta: até 15 dias úteis`
+**Acesso:** Solicitar informações sobre seus dados
+**Correção:** Corrigir dados incorretos
+**Exclusão:** Solicitar remoção de seus dados
+**Portabilidade:** Receber seus dados em formato legível
+**Oposição:** Opor-se ao tratamento de seus dados
+
+Para exercer estes direitos, entre em contato: ferreirafabio51@gmail.com`
         }
       ],
-      cookiesSection: {
-        title: 'Política de Cookies',
-        content: `**Cookies Essenciais:**
-- Funcionamento básico do site
-- Preferências de idioma
-- Sessão do usuário
-
-**Cookies Analíticos:**
-- Google Analytics (opcional)
-- Estatísticas de uso
-- Comportamento de navegação
-
-**Gerenciamento:**
-Você pode gerenciar cookies através das configurações do seu navegador ou através do banner de consentimento.`
-      },
-      termsSection: {
-        title: 'Termos de Uso',
-        content: `**Propriedade Intelectual:**
-Todo o conteúdo deste portfólio, incluindo textos, imagens, código e design, é de propriedade exclusiva de Fábio Ferreira Paula dos Santos, protegido pela Lei de Direitos Autorais (Lei 9.610/98).
-
-**Uso Permitido:**
-- Visualização pessoal do portfólio
-- Compartilhamento de links para fins profissionais
-- Contato para oportunidades de trabalho
-
-**Uso Proibido:**
-- Reprodução sem autorização
-- Modificação do conteúdo
-- Uso comercial não autorizado
-- Engenharia reversa do código
-
-**Responsabilidade:**
-O usuário é responsável pelo uso adequado do site e pelo respeito aos direitos autorais.`
-      },
       contact: {
         title: 'Contato',
         content: `**Dúvidas sobre Privacidade:**
 Email: ferreirafabio51@gmail.com
 
-**Contato Geral:**
-Email: ferreirafabio51@gmail.com
-LinkedIn: https://www.linkedin.com/in/ferreira-f%C3%A1bio-98b4304a/
+**Contato Profissional:**
+- Email: ferreirafabio51@gmail.com
+- LinkedIn: https://www.linkedin.com/in/ferreira-fábio-98b4304a/
+- WhatsApp: +55 42 99164-3802 (https://wa.me/5542991643802)
 
-**Denúncias LGPD:**
-Você pode reportar violações à ANPD (Autoridade Nacional de Proteção de Dados) através do site: gov.br/anpd`
+**Tempo de Resposta:** Até 48 horas úteis.`
+      },
+      termsSection: {
+        title: 'Termos de Uso',
+        content: `**Uso Permitido:**
+- Visualização do portfólio para fins profissionais
+- Compartilhamento de links para oportunidades de trabalho
+- Contato para propostas de colaboração
+
+**Uso Proibido:**
+- Cópia não autorizada do conteúdo
+- Uso comercial sem permissão
+- Tentativas de acesso não autorizado
+
+**Propriedade Intelectual:**
+Todo o conteúdo deste portfólio é de propriedade de Fábio Ferreira, protegido pela Lei de Direitos Autorais (Lei 9.610/98).`
       }
     },
-    'en-US': {
-      title: 'Privacy Policy and Terms of Use',
-      lastUpdated: 'Last updated: January 8, 2025',
+    'en': {
+      title: 'Privacy Policy',
+      lastUpdated: 'Last updated: September 22, 2025',
       sections: [
         {
           icon: Shield,
-          title: 'Personal Data Protection',
-          content: `In compliance with the General Data Protection Law (LGPD - Law 13.709/2018), this document informs how we collect, use and protect your personal data.
+          title: 'General Information',
+          content: `This portfolio belongs to **Fábio Ferreira**, a software developer specialized in Flutter and full-stack development.
 
 **Data Controller:**
-Fábio Ferreira Paula dos Santos
-Email: ferreirafabio51@gmail.com
-
-**Data Collected:**
-- Navigation information (IP, browser, operating system)
-- Chatbot interaction data
-- Visit statistics and time spent
-- Essential cookies for site functionality`
+- Name: Fábio Ferreira
+- Email: ferreirafabio51@gmail.com
+- LinkedIn: https://www.linkedin.com/in/ferreira-fábio-98b4304a/
+- WhatsApp: +55 42 99164-3802`
         },
         {
           icon: Eye,
-          title: 'Purpose of Processing',
-          content: `The collected data is used for:
-- Statistical analysis of visits
-- User experience improvement
-- Portfolio chatbot functionality
-- Security and fraud prevention
-- Compliance with legal obligations`
+          title: 'Data Collected',
+          content: `This website collects only essential data for its operation:
+
+**Technical Data:**
+- IP address (anonymized)
+- Browser type and operating system
+- Pages visited and time spent
+- Chatbot interaction data
+
+**Contact Data:**
+- Only when you voluntarily contact us
+- Email, name and message (if provided)`
         },
         {
           icon: Database,
-          title: 'Storage and Security',
-          content: `**Storage:**
-- Data stored on secure servers (Supabase)
-- Location: United States (with LGPD compliance)
-- Retention period: 12 months for analytical data
+          title: 'How We Use Your Data',
+          content: `The collected data is used exclusively for:
 
-**Security Measures:**
-- Data encryption in transit and at rest
-- Secure authentication for data access
-- 24/7 security monitoring
-- Regular backups and disaster recovery`
+**Website Operation:**
+- Visit analysis to improve the portfolio
+- Chatbot functionality
+- Usage statistics (anonymized)
+
+**Communication:**
+- Responding to sent messages
+- Contacting about professional opportunities
+
+We do **NOT share** your data with third parties.`
         },
         {
           icon: UserCheck,
           title: 'Your Rights',
-          content: `According to LGPD, you have the right to:
-- **Access:** Confirm if your data is being processed
-- **Correction:** Correct incomplete or incorrect data
-- **Deletion:** Request deletion of unnecessary data
-- **Portability:** Receive your data in structured format
-- **Opposition:** Object to data processing
-- **Review:** Review automated decisions
+          content: `According to GDPR/LGPD, you have the right to:
 
-**To exercise your rights:**
-Email: ferreirafabio51@gmail.com
-Response time: up to 15 business days`
+**Access:** Request information about your data
+**Correction:** Correct incorrect data
+**Deletion:** Request removal of your data
+**Portability:** Receive your data in readable format
+**Objection:** Object to processing of your data
+
+To exercise these rights, contact: ferreirafabio51@gmail.com`
         }
       ],
-      cookiesSection: {
-        title: 'Cookie Policy',
-        content: `**Essential Cookies:**
-- Basic site functionality
-- Language preferences
-- User session
-
-**Analytical Cookies:**
-- Google Analytics (optional)
-- Usage statistics
-- Navigation behavior
-
-**Management:**
-You can manage cookies through your browser settings or through the consent banner.`
-      },
-      termsSection: {
-        title: 'Terms of Use',
-        content: `**Intellectual Property:**
-All content in this portfolio, including texts, images, code and design, is the exclusive property of Fábio Ferreira Paula dos Santos, protected by Copyright Law (Law 9.610/98).
-
-**Permitted Use:**
-- Personal viewing of the portfolio
-- Sharing links for professional purposes
-- Contact for job opportunities
-
-**Prohibited Use:**
-- Reproduction without authorization
-- Content modification
-- Unauthorized commercial use
-- Reverse engineering of code
-
-**Responsibility:**
-The user is responsible for proper use of the site and respect for copyright.`
-      },
       contact: {
         title: 'Contact',
         content: `**Privacy Questions:**
 Email: ferreirafabio51@gmail.com
 
-**General Contact:**
-Email: ferreirafabio51@gmail.com
-LinkedIn: https://www.linkedin.com/in/ferreira-f%C3%A1bio-98b4304a/
+**Professional Contact:**
+- Email: ferreirafabio51@gmail.com
+- LinkedIn: https://www.linkedin.com/in/ferreira-fábio-98b4304a/
+- WhatsApp: +55 42 99164-3802 (https://wa.me/5542991643802)
 
-**LGPD Reports:**
-You can report violations to ANPD (National Data Protection Authority) through the website: gov.br/anpd`
+**Response Time:** Up to 48 business hours.`
+      },
+      termsSection: {
+        title: 'Terms of Use',
+        content: `**Permitted Use:**
+- Viewing the portfolio for professional purposes
+- Sharing links for job opportunities
+- Contact for collaboration proposals
+
+**Prohibited Use:**
+- Unauthorized copying of content
+- Commercial use without permission
+- Unauthorized access attempts
+
+**Intellectual Property:**
+All content in this portfolio is owned by Fábio Ferreira, protected by Copyright Law.`
       }
     }
   };
 
-  const currentContent = content[language] || content['en-US'];
+  const currentContent = content[language as keyof typeof content] || content['pt-BR'];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
       <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
-            <Button
-              onClick={() => navigate('/')}
-              variant="outline"
-              className="mb-4 border-green-500/30 text-green-400 hover:bg-green-500/10"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              {language === 'pt-BR' ? 'Voltar ao Portfólio' : 'Back to Portfolio'}
-            </Button>
+        {/* Header */}
+        <div className="mb-8">
+          <Button
+            variant="ghost"
+            onClick={() => navigate(-1)}
+            className="mb-4 text-green-400 hover:text-green-300"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            {language === 'pt-BR' ? 'Voltar' : 'Back'}
+          </Button>
+          
+          <h1 className="text-4xl font-bold mb-2 text-green-400">
+            {currentContent.title}
+          </h1>
+          <p className="text-gray-400">{currentContent.lastUpdated}</p>
+        </div>
 
-            <h1 className="text-4xl font-bold text-green-400 mb-2">
-              {currentContent.title}
-            </h1>
-            <p className="text-gray-400">{currentContent.lastUpdated}</p>
-          </div>
-
-          <div className="space-y-6">
-            {currentContent.sections.map((section, index) => (
-              <Card key={index} className="bg-slate-800/50 border-slate-700">
+        {/* Sections */}
+        <div className="space-y-6">
+          {currentContent.sections.map((section, index) => {
+            const IconComponent = section.icon;
+            return (
+              <Card key={index} className="bg-gray-800/50 border-gray-700">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-green-400">
-                    <section.icon className="w-5 h-5" />
+                  <CardTitle className="flex items-center gap-3 text-green-400">
+                    <IconComponent className="h-6 w-6" />
                     {section.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-gray-300 whitespace-pre-line">
-                    {section.content}
+                  <div className="prose prose-invert max-w-none">
+                    {section.content.split('\n').map((line, lineIndex) => {
+                      if (line.startsWith('**') && line.endsWith('**')) {
+                        return (
+                          <p key={lineIndex} className="font-semibold text-green-300 mb-2">
+                            {line.replace(/\*\*/g, '')}
+                          </p>
+                        );
+                      }
+                      if (line.trim() === '') {
+                        return <br key={lineIndex} />;
+                      }
+                      return (
+                        <p key={lineIndex} className="mb-2 text-gray-300">
+                          {line}
+                        </p>
+                      );
+                    })}
                   </div>
                 </CardContent>
               </Card>
-            ))}
+            );
+          })}
 
-            <Card className="bg-slate-800/50 border-slate-700">
-              <CardHeader>
-                <CardTitle className="text-green-400">
-                  {currentContent.cookiesSection.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-gray-300 whitespace-pre-line">
-                  {currentContent.cookiesSection.content}
-                </div>
-              </CardContent>
-            </Card>
+          {/* Contact Section */}
+          <Card className="bg-gray-800/50 border-gray-700">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3 text-green-400">
+                <Mail className="h-6 w-6" />
+                {currentContent.contact.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="prose prose-invert max-w-none">
+                {currentContent.contact.content.split('\n').map((line, lineIndex) => {
+                  if (line.startsWith('**') && line.endsWith('**')) {
+                    return (
+                      <p key={lineIndex} className="font-semibold text-green-300 mb-2">
+                        {line.replace(/\*\*/g, '')}
+                      </p>
+                    );
+                  }
+                  if (line.trim() === '') {
+                    return <br key={lineIndex} />;
+                  }
+                  return (
+                    <p key={lineIndex} className="mb-2 text-gray-300">
+                      {line}
+                    </p>
+                  );
+                })}
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="bg-slate-800/50 border-slate-700">
-              <CardHeader>
-                <CardTitle className="text-green-400">
-                  {currentContent.termsSection.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-gray-300 whitespace-pre-line">
-                  {currentContent.termsSection.content}
-                </div>
-              </CardContent>
-            </Card>
+          {/* Terms Section */}
+          <Card className="bg-gray-800/50 border-gray-700">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-3 text-green-400">
+                <Shield className="h-6 w-6" />
+                {currentContent.termsSection.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="prose prose-invert max-w-none">
+                {currentContent.termsSection.content.split('\n').map((line, lineIndex) => {
+                  if (line.startsWith('**') && line.endsWith('**')) {
+                    return (
+                      <p key={lineIndex} className="font-semibold text-green-300 mb-2">
+                        {line.replace(/\*\*/g, '')}
+                      </p>
+                    );
+                  }
+                  if (line.trim() === '') {
+                    return <br key={lineIndex} />;
+                  }
+                  return (
+                    <p key={lineIndex} className="mb-2 text-gray-300">
+                      {line}
+                    </p>
+                  );
+                })}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
 
-            <Card className="bg-slate-800/50 border-slate-700">
-              <CardHeader>
-                <CardTitle className="text-green-400">
-                  {currentContent.contact.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-gray-300 whitespace-pre-line">
-                  {currentContent.contact.content}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+        {/* Footer */}
+        <div className="mt-12 text-center text-gray-400">
+          <p>
+            {language === 'pt-BR' 
+              ? 'Esta política pode ser atualizada periodicamente. Recomendamos revisar regularmente.'
+              : 'This policy may be updated periodically. We recommend reviewing regularly.'
+            }
+          </p>
         </div>
       </div>
     </div>
