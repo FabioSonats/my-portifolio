@@ -86,7 +86,7 @@ Você pode gerenciar cookies através das configurações do seu navegador ou at
       termsSection: {
         title: 'Termos de Uso',
         content: `**Propriedade Intelectual:**
-Todo o conteúdo deste portfólio, incluindo textos, imagens, código e design, é de propriedade exclusiva de Fábio Henrique Nunes, protegido pela Lei de Direitos Autorais (Lei 9.610/98).
+Todo o conteúdo deste portfólio, incluindo textos, imagens, código e design, é de propriedade exclusiva de Fábio Ferreira Paula dos Santos, protegido pela Lei de Direitos Autorais (Lei 9.610/98).
 
 **Uso Permitido:**
 - Visualização pessoal do portfólio
@@ -105,7 +105,7 @@ O usuário é responsável pelo uso adequado do site e pelo respeito aos direito
       contact: {
         title: 'Contato',
         content: `**Dúvidas sobre Privacidade:**
-Email: privacidade@fabiohenrique.dev
+Email: ferreirafabio51@gmail.com
 
 **Contato Geral:**
 Email: ferreirafabio51@gmail.com
@@ -192,7 +192,7 @@ You can manage cookies through your browser settings or through the consent bann
       termsSection: {
         title: 'Terms of Use',
         content: `**Intellectual Property:**
-All content in this portfolio, including texts, images, code and design, is the exclusive property of Fábio Henrique Nunes, protected by Copyright Law (Law 9.610/98).
+All content in this portfolio, including texts, images, code and design, is the exclusive property of Fábio Ferreira Paula dos Santos, protected by Copyright Law (Law 9.610/98).
 
 **Permitted Use:**
 - Personal viewing of the portfolio
@@ -238,7 +238,7 @@ You can report violations to ANPD (National Data Protection Authority) through t
               <ArrowLeft className="w-4 h-4 mr-2" />
               {language === 'pt-BR' ? 'Voltar ao Portfólio' : 'Back to Portfolio'}
             </Button>
-            
+
             <h1 className="text-4xl font-bold text-green-400 mb-2">
               {currentContent.title}
             </h1>

@@ -1,6 +1,8 @@
 
 
 
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
@@ -17,7 +19,7 @@ const GEMINI_API_KEY = typeof globalThis.Deno !== "undefined" && globalThis.Deno
 
 serve(async (req) => {
   console.log('Chat function called with method:', req.method)
-  
+
   // Handle CORS
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
@@ -25,14 +27,14 @@ serve(async (req) => {
 
   try {
     console.log('Checking GEMINI_API_KEY:', GEMINI_API_KEY ? 'Present' : 'Missing')
-    
+
     if (!GEMINI_API_KEY) {
       console.error('GEMINI_API_KEY not configured')
       return new Response(
         JSON.stringify({ error: 'API key not configured' }),
-        { 
-          status: 500, 
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        {
+          status: 500,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' }
         }
       )
     }
@@ -40,7 +42,7 @@ serve(async (req) => {
     console.log('Parsing request body...')
     const requestBody = await req.json()
     console.log('Request body parsed:', { hasMessage: !!requestBody.message, hasPortfolioData: !!requestBody.portfolioData })
-    
+
     const { message, portfolioData } = requestBody
 
     const systemPrompt = `Você é um assistente virtual especializado no portfólio de Fábio Ferreira. Você deve responder perguntas sobre sua formação, experiência, projetos, habilidades e trajetória profissional de forma concisa e técnica.
@@ -113,9 +115,10 @@ IMPORTANTE: Este é o portfólio oficial do Fábio Ferreira (https://pro-portifo
 Dados do portfólio: ${JSON.stringify(portfolioData)}`
 
     console.log('Calling Gemini API...')
+    console.log('GEMINI_API_KEY length:', GEMINI_API_KEY?.length || 0)
     const geminiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=' + GEMINI_API_KEY
     console.log('Gemini URL (without key):', 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=***')
-    
+
     const geminiRequestBody = {
       contents: [
         {
@@ -132,9 +135,9 @@ Dados do portfólio: ${JSON.stringify(portfolioData)}`
         maxOutputTokens: 1000,
       },
     }
-    
+
     console.log('Request body structure:', JSON.stringify(geminiRequestBody, null, 2))
-    
+
     const response = await fetch(geminiUrl, {
       method: 'POST',
       headers: {
@@ -162,26 +165,23 @@ Dados do portfólio: ${JSON.stringify(portfolioData)}`
 
     return new Response(
       JSON.stringify({ response: aiResponse }),
-      { 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+      {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       }
     )
 
   } catch (error) {
     console.error('Error in chat function:', error)
     return new Response(
-      JSON.stringify({ 
+      JSON.stringify({
         error: 'Erro interno do servidor. Tente novamente mais tarde.',
-        details: error.message 
+        details: error.message
       }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+      {
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       }
     )
   }
 })
-function serve(arg0: (req: any) => Promise<Response>) {
-  throw new Error("Function not implemented.");
-}
 

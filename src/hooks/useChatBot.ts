@@ -15,9 +15,9 @@ export const useChatBot = ({ language, portfolioData }: UseChatBotProps) => {
   const initializeWelcomeMessage = () => {
     const welcomeMessage: Message = {
       id: '1',
-      text: language === 'pt-BR' 
-        ? 'Olá! Sou o assistente virtual do portfólio do Fábio Ferreira Paula dos Santos. Posso responder perguntas sobre sua formação, experiência, projetos e habilidades. Como posso ajudá-lo?'
-        : 'Hello! I am the virtual assistant for Fábio Ferreira Paula dos Santos\'s portfolio. I can answer questions about his education, experience, projects, and skills. How can I help you?',
+      text: language === 'pt-BR'
+        ? 'Olá! Sou o assistente virtual do portfólio do Fábio Ferreira. Posso responder perguntas sobre sua formação, experiência, projetos e habilidades. Como posso ajudá-lo?'
+        : 'Hello! I am the virtual assistant for Fábio Ferreira\'s portfolio. I can answer questions about his education, experience, projects, and skills. How can I help you?',
       isUser: false,
       timestamp: new Date()
     };
@@ -39,6 +39,9 @@ export const useChatBot = ({ language, portfolioData }: UseChatBotProps) => {
     setIsLoading(true);
 
     try {
+      console.log('Sending message to chat function:', inputMessage);
+      console.log('Portfolio data:', portfolioData);
+
       const { data, error } = await supabase.functions.invoke('chat', {
         body: {
           message: inputMessage,
@@ -46,7 +49,10 @@ export const useChatBot = ({ language, portfolioData }: UseChatBotProps) => {
         }
       });
 
+      console.log('Chat function response:', { data, error });
+
       if (error) {
+        console.error('Chat function error:', error);
         throw error;
       }
 
@@ -62,10 +68,10 @@ export const useChatBot = ({ language, portfolioData }: UseChatBotProps) => {
       if (process.env.NODE_ENV === 'development') {
         console.error('Error calling chat function:', error);
       }
-      
+
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: language === 'pt-BR' 
+        text: language === 'pt-BR'
           ? 'Desculpe, ocorreu um erro ao processar sua mensagem. Tente novamente mais tarde.'
           : 'Sorry, an error occurred while processing your message. Please try again later.',
         isUser: false,
