@@ -1,11 +1,11 @@
 
-import { Code, Zap, ExternalLink } from "lucide-react";
+import { Code, Zap, ExternalLink, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
   const { t } = useLanguage();
-  
+
   return (
     <section className="min-h-screen flex items-center justify-center px-4 pt-20">
       <div className="text-center max-w-4xl mx-auto">
@@ -17,17 +17,17 @@ const HeroSection = () => {
         </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 hero-title">
           <br />
-           <span className="text-white">{t('developer')}</span>
+          <span className="text-white">{t('developer')}</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in">
           {t('specialized')} {" "}
           <span className="text-green-400">{t('crossPlatform')}</span>
           {t('solutions') && ` ${t('solutions')}`}
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-green-500 hover:bg-green-600 text-black font-bold px-8 py-3 text-lg shadow-lg shadow-green-500/20"
             asChild
           >
@@ -36,9 +36,9 @@ const HeroSection = () => {
               {t('viewFlutterProject')}
             </a>
           </Button>
-          <Button 
-            variant="outline" 
-            size="lg" 
+          <Button
+            variant="outline"
+            size="lg"
             className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black px-8 py-3 text-lg"
             asChild
           >
@@ -47,9 +47,9 @@ const HeroSection = () => {
               {t('reactProject')}
             </a>
           </Button>
-          <Button 
-            variant="outline" 
-            size="lg" 
+          <Button
+            variant="outline"
+            size="lg"
             className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black px-8 py-3 text-lg"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >

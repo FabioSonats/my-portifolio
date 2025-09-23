@@ -15,7 +15,7 @@ const ChatBot = () => {
   const { language } = useLanguage();
 
   const portfolioData = getPortfolioData(language);
-  
+
   const {
     messages,
     inputMessage,
@@ -68,26 +68,28 @@ const ChatBot = () => {
             <X className="w-4 h-4" />
           </Button>
         </CardHeader>
-        
-        <CardContent className="flex flex-col h-[calc(100%-4rem)] p-4">
-          <div className="flex-1 overflow-y-auto space-y-4 mb-4 pr-2">
+
+        <CardContent className="flex flex-col h-[calc(100%-4rem)] p-4 min-w-0">
+          <div className="flex-1 overflow-y-auto space-y-4 mb-12 pr-2 min-w-0">
             {messages.map((message) => (
               <ChatMessage key={message.id} message={message} />
             ))}
-            
+
             {isLoading && <ChatLoadingIndicator />}
-            
+
             <div ref={messagesEndRef} />
           </div>
-          
-          <ChatInput
-            value={inputMessage}
-            onChange={setInputMessage}
-            onSend={sendMessage}
-            onKeyPress={handleKeyPress}
-            isLoading={isLoading}
-            placeholder={language === 'pt-BR' ? 'Digite sua pergunta...' : 'Type your question...'}
-          />
+
+          <div className="flex-shrink-0 min-w-0">
+            <ChatInput
+              value={inputMessage}
+              onChange={setInputMessage}
+              onSend={sendMessage}
+              onKeyPress={handleKeyPress}
+              isLoading={isLoading}
+              placeholder={language === 'pt-BR' ? 'Digite sua pergunta...' : 'Type your question...'}
+            />
+          </div>
         </CardContent>
       </Card>
     </div>

@@ -51,7 +51,9 @@ PERFIL PROFISSIONAL DE FÁBIO FERREIRA PAULA DOS SANTOS:
 
 VARIATIONS DE REFERÊNCIA:
 - Use variações formais: "Fábio", "Fábio Ferreira, desenvolvedor", "Fábio Ferreira, Analista de Sistemas"
-- Seja natural e profissional, não sempre "Fábio Ferreira"
+- Seja natural e profissional, NUNCA use sempre "Fábio Ferreira"
+- Varie entre: "Fábio", "ele", "o desenvolvedor", "Fábio Ferreira", "o analista de sistemas"
+- Use "Fábio" na maioria das vezes, "Fábio Ferreira" apenas quando necessário para clareza
 
 INFORMAÇÕES PESSOAIS:
 - Nome completo: Fábio Ferreira Paula dos Santos

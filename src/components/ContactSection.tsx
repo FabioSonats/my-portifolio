@@ -1,13 +1,19 @@
 
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactSection = () => {
   const { t } = useLanguage();
-  
+
   const contactMethods = [
+    {
+      icon: MessageCircle,
+      title: "WhatsApp",
+      subtitle: "Contato Direto",
+      action: "https://wa.me/5541999999999?text=Olá! Vi seu portfólio e gostaria de conversar sobre uma oportunidade de trabalho."
+    },
     {
       icon: Mail,
       title: t('email'),
@@ -41,14 +47,14 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {contactMethods.map((method, index) => (
             <Card key={index} className="bg-black/50 border-green-500/30 hover:border-green-400/60 transition-all hover:transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/20">
               <CardContent className="p-8 text-center">
                 <method.icon className="h-12 w-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">{method.title}</h3>
                 <p className="text-gray-300 mb-6">{method.subtitle}</p>
-                <Button 
+                <Button
                   asChild
                   className="bg-green-500 hover:bg-green-600 text-black font-bold w-full shadow-lg shadow-green-500/20"
                 >

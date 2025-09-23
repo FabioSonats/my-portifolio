@@ -9,9 +9,7 @@ const ChatMessage = ({ message }: ChatMessageProps) => {
   const formatMessageWithLinks = (text: string) => {
     // Regex para detectar URLs (incluindo wa.me)
     const urlRegex = /(https?:\/\/[^\s\)]+)/g;
-    const parts = text.split(urlRegex);
-    
-    return parts.map((part, index) => {
+    const parts = text.split(urlRegex); return parts.map((part, index) => {
       if (part.match(urlRegex)) {
         return (
           <a
@@ -30,18 +28,17 @@ const ChatMessage = ({ message }: ChatMessageProps) => {
   };
 
   return (
-    <div className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}>
+    <div className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} w-full`}>
       <div
-        className={`max-w-[80%] rounded-lg px-3 py-2 text-sm ${
-          message.isUser
-            ? 'bg-green-500 text-white'
-            : 'bg-slate-700 text-gray-100'
-        }`}
+        className={`max-w-[80%] rounded-lg px-3 py-2 text-sm ${message.isUser
+          ? 'bg-green-500 text-white'
+          : 'bg-slate-700 text-gray-100'
+          }`}
       >
         <div className="flex items-start gap-2">
           {!message.isUser && <Bot className="w-4 h-4 mt-0.5 text-green-400" />}
           <div className="flex-1">
-            <p className="whitespace-pre-wrap">
+            <p className="whitespace-pre-wrap break-words overflow-wrap-anywhere word-break-break-word">
               {formatMessageWithLinks(message.text)}
             </p>
             <p className="text-xs opacity-70 mt-1">
