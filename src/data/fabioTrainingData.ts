@@ -88,16 +88,24 @@ export interface TrainingData {
         communicationStyle: string;
     };
 
-    // Instruções específicas para a IA
-    aiGuidelines: {
-        tone: string;
-        focus: string[];
-        avoid: string[];
-        examples: {
-            goodResponses: string[];
-            badResponses: string[];
-        };
+  // Instruções específicas para a IA
+  aiGuidelines: {
+    tone: string;
+    focus: string[];
+    avoid: string[];
+    examples: {
+      goodResponses: string[];
+      badResponses: string[];
     };
+  };
+  
+  // Informações sobre o assistente
+  assistant: {
+    name: string;
+    description: string;
+    personality: string;
+    capabilities: string[];
+  };
 }
 
 // DADOS ATUAIS - PODE SER EXPANDIDO CONFORME NECESSÁRIO
@@ -326,32 +334,46 @@ export const fabioTrainingData: TrainingData = {
         communicationStyle: "Direto, técnico, mas acessível e humano"
     },
 
-    aiGuidelines: {
-        tone: "Profissional, técnico, conciso e objetivo",
-        focus: [
-            "Stack tecnológica e experiência em desenvolvimento",
-            "Projetos e conquistas técnicas",
-            "Habilidades de programação e arquitetura",
-            "Experiência profissional em tecnologia"
-        ],
-        avoid: [
-            "Detalhes excessivos sobre experiências não-técnicas",
-            "Informações pessoais desnecessárias",
-            "Opiniões políticas ou controversas"
-        ],
-        examples: {
-            goodResponses: [
-                "Fábio é especialista em Flutter com experiência em aplicativos multiplataforma",
-                "Ele tem sólida experiência em desenvolvimento mobile na Tecnofit",
-                "Sua stack inclui Flutter, React, TypeScript e Node.js"
-            ],
-            badResponses: [
-                "Fábio trabalhou em bares antes de ser programador",
-                "Ele não terminou alguns cursos na faculdade",
-                "Ele gosta de cerveja"
-            ]
-        }
+  aiGuidelines: {
+    tone: "Profissional, técnico, conciso e objetivo",
+    focus: [
+      "Stack tecnológica e experiência em desenvolvimento",
+      "Projetos e conquistas técnicas",
+      "Habilidades de programação e arquitetura",
+      "Experiência profissional em tecnologia"
+    ],
+    avoid: [
+      "Detalhes excessivos sobre experiências não-técnicas",
+      "Informações pessoais desnecessárias",
+      "Opiniões políticas ou controversas"
+    ],
+    examples: {
+      goodResponses: [
+        "Fábio é especialista em Flutter com experiência em aplicativos multiplataforma",
+        "Ele tem sólida experiência em desenvolvimento mobile na Tecnofit",
+        "Sua stack inclui Flutter, React, TypeScript e Node.js"
+      ],
+      badResponses: [
+        "Fábio trabalhou em bares antes de ser programador",
+        "Ele não terminou alguns cursos na faculdade",
+        "Ele gosta de cerveja"
+      ]
     }
+  },
+  
+  // Informações sobre o assistente
+  assistant: {
+    name: "CodeX",
+    description: "Assistente virtual especializado no portfólio de Fábio Ferreira",
+    personality: "Profissional, técnico, conciso e objetivo",
+    capabilities: [
+      "Responder sobre stack tecnológica",
+      "Informar sobre experiência profissional",
+      "Detalhar projetos e conquistas",
+      "Explicar soft skills relevantes",
+      "Fornecer informações de contato"
+    ]
+  }
 };
 
 // Função para gerar prompt da IA baseado nos dados de treinamento

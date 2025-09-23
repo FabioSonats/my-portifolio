@@ -57,7 +57,7 @@ const ChatBot = () => {
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
           <CardTitle className="text-green-400 flex items-center gap-2">
             <Bot className="w-5 h-5" />
-            {language === 'pt-BR' ? 'Assistente do Portfólio' : 'Portfolio Assistant'}
+            {language === 'pt-BR' ? 'CodeX - Assistente do Portfólio' : 'CodeX - Portfolio Assistant'}
           </CardTitle>
           <Button
             variant="ghost"
